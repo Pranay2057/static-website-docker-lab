@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Static Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { color: #333; }
+        .status { padding: 10px; background: #f0f0f0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Static Website Hosted on S3</h1>
+        <p>This website is automatically deployed via GitHub Actions CI/CD!</p>
+        
+        <div class="status">
+            <h3>Deployment Status:</h3>
+            <p>✅ Successfully deployed from GitHub</p>
+            <p>📅 Last updated: <span id="date"></span></p>
+        </div>
+        
+        <h3>Features:</h3>
+        <ul>
+            <li>Hosted on Amazon S3</li>
+            <li>Automated CI/CD with GitHub Actions</li>
+            <li>Served through Docker on EC2</li>
+            <li>Fully automated deployment</li>
+        </ul>
+        
+        <h3>Visit the Docker Container:</h3>
+        <a href="/nginx">View NGINX Container</a>
+    </div>
+    
+    <script>
+        document.getElementById('date').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
+error.html:
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Not Found</title>
+</head>
+<body>
+    <h1>404 - Page Not Found</h1>
+    <p>The page you're looking for doesn't exist.</p>
+    <a href="/">Go back home</a>
+</body>
+</html>
